@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive card design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            background: #1a1b29;
+             /* background: linear-gradient(235deg, #06152a7f, #002f44, #0012637e);  */
+        }
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px;
+            transition: 0.5s;
+            background: #27292f;
+            border: 5px;
+            border-radius: 15px;
+         
+        }
+        .box:hover {
+            height: 400px;
+        }
+        .box.imgbox {
+          
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            
+        }
+        .box .imgbox img {
+            max-width: 100%;
+            opacity: 0.1;
+            transition: 0.5s;
+            /* border: 5px;
+            border-radius: 15px; */
+        }
+        .box:hover .imgbox img {
+        width: 400px;
+        height: 395px;
+            opacity: 1;
+        }
+        .box:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index: -1;
+           
+         
+        }
+        .box:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: #fff;
+            z-index:-2;
+            filter: blur(40px);
+
+        }
+        .box:before,
+        .box:after {
+            background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+        }
+        .box:nth-child(2):before,
+        .box:nth-child(2):after {
+            background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+        }
+        .box:nth-child(3):before,
+        .box:nth-child(3):after {
+            background: linear-gradient(235deg, #02c9fa, #010615, #2bd36b);
+        }
+        .box:nth-child(4):before,
+        .box:nth-child(4):after {
+            background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+        }
+        .box:nth-child(5):before,
+        .box:nth-child(5):after {
+            background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+        }
+        .box:nth-child(6):before,
+        .box:nth-child(6):after {
+            background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+        }
+
+
+
+
+        .box .content {
+            position: absolute;
+             bottom: 0;
+
+            left: 0px;
+            right: 0px;
+            height: 90px;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .box:hover .content {
+        background-color: #010615;
+         border:  4px solid black;
+        border-radius: 5px;
+        opacity: 1;
+        }
+        .box .content h2 {
+            font-size: 20px;
+            color: #00fff2;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+        .box .content h2 span {
+            font-size: 14px;
+            color: #ff008ceb;
+            font-weight: 200;
+            letter-spacing: 2px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<div class="imgbox">
+<img src="http://drive.google.com/uc?export=view&id=1KOI7Dph-PnjYtB1nbACYA2bgqqb7x9kU" height="290px"  width="290px" alt="loading">
+</div>
+<div class="content">
+<h2>HEMANT SONI
+    <br><span>
+   Trader,Astrologer,Aspiring developer
+</span></h2>
+        </div>
+</div>
+
+    
+
+    <div class="box">
+        <div class="imgbox">
+            <img src="http://drive.google.com/uc?export=view&id=1zvkmfb85PWIQxG2PxLrU2SGm2xghYRUd"  height="290px"  width="290px" alt="loading">
+        </div>
+        <div class="content">
+            <h2>RITIKA RATNAKAR <br><span>
+              Aspiring Doctor
+            </span></h2>
+        </div>
+    </div>
+
+
+    
+    <div class="box">
+        <div class="imgbox">
+            <img src="http://drive.google.com/uc?export=view&id=1nGEjpM2dPCa6h0nTzH0aWRUTQG90SP-t" height="290px"  width="290px" alt="loading">
+            </div>
+        <div class="content">
+            <h2>ABHINAV VERMA<br><span>
+               chotu bacha 
+            </span></h2>
+        </div>
+    </div>
+   
+    
+    <div class="box">
+        <div class="imgbox">
+        <img src="http://drive.google.com/uc?export=view&id=1oeG-59t3jHuFPLGWxTvbz9p6rML-yWs7" height="290px"  width="290px" alt="loading">
+        </div>
+        <div class="content">
+        <h2>SHWETA SONI<br><span>
+           Accountant 
+        </span></h2>
+                </div>
+        </div>
+        
+  
+        <div class="box">
+            <div class="imgbox">
+            <img src="http://drive.google.com/uc?export=view&id=10b--1oimKcBq9r_H467CL4Ktzus8qQvB" height="290px"  width="290px" alt="loading">
+            </div>
+            <div class="content">
+            <h2>VIVEK VERMA <br><span>
+              Aspiring Web Developer,currently nalla
+            </span></h2>
+                    </div>
+            </div>
+
+
+        
+            <div class="box">
+                <div class="imgbox">
+                <img src="http://drive.google.com/uc?export=view&id=1AuwcsIscJ-f_zxJeGoIdsoklDzCd6wOH" height="290px"  width="290px" alt="loading">
+                </div>
+                <div class="content">
+                <h2>NAGENDRA SINGH <br><span>
+                   Aspiring Engineer 
+                </span></h2>
+                        </div>
+                </div>
+
+
+</body>
+</html>
